@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <title>Document</title>
+</head>
+
+<body>
+<section>
+    <div  class="search bg-slate-500 py-6 ">
+        <input type="text" id="search-field" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs ml-5" />
+        <button class="btn btn-success" onclick="handleClick()">Search</button>
+        <button class="btn btn-warning" onclick="handleClick2()">Search</button>
+    </div>
+
+    <div class="hidden " id="loading-bar">
+        <span class="loading loading-dots loading-lg "></span>
+    </div>
+
+    <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-12"> 
+    </div>
+
+    <div class="my-10">
+        <button class="btn btn-warning hidden" onclick="showAllBtn()" id="show-all-btn">Show All</button>
+    </div>
+</section>
+
+<!-- modal start -->
+<!-- Open the modal using ID.showModal() method -->
+
+ <dialog id="my_modal_2" class="modal">
+  <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg" id="modal-title"></h3>
+    <div id="modal-container" ></div>
+  </form>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+ </dialog>
+
+
+<!--  -->
+<!-- script js -->
+<script src="./api.js"></script>
+</body>
+
+</html>
